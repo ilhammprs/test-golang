@@ -6,6 +6,11 @@
 * HTTP Only cookies
 * JWT
 
+## Perintah untuk menjalankan 
+```sh
+go run main.go
+```
+
 ## Routes
 ```sh
 ## AUTH
