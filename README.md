@@ -36,8 +36,8 @@ localhost:8000/api/delete/:id # delete notes by id (DELETE)
 ##### Login 
 ```json
 {
-    "email": "admin@gmail.com",
-    "password": "123456"
+    "name": "emon",
+    "email": "emon@gmail.com",
 }
 ```
 
