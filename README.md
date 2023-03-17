@@ -16,7 +16,7 @@ go run main.go
 ## AUTH
 localhost:8000/api/register # Register(s) (POST)
 localhost:8000/api/login # Login user (POST)
-localhost:8000/api/logout  # Logout user (POST)
+localhost:8000/api/logout # Logout user (POST)
 localhost:8000/api/user # get user (get)
 
 ## CRUD
@@ -44,6 +44,16 @@ localhost:8000/api/delete/:id # delete notes by id (DELETE)
     "email": "emon@gmail.com",
     "password": "8798634"
 }
+```
+
+##### Logout
+```json
+{
+    "title": "test",
+    "category": "test pertama",
+    "details": "data"
+}
+
 ```
 
 ##### Menambahkan Notes 
