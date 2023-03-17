@@ -27,7 +27,7 @@ localhost:8000/api/update/:id # update notes by id (PUT)
 localhost:8000/api/delete/:id # delete notes by id (DELETE)
 ```
 
-## Example Requests
+## Sample Request in postman
 ##### Register 
 ```json
 {
