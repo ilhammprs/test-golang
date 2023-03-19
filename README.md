@@ -6,12 +6,17 @@
 * HTTP Only cookies
 * JWT
 
+## Perintah untuk menjalankan 
+```sh
+go run main.go
+```
+
 ## Routes
 ```sh
 ## AUTH
 localhost:8000/api/register # Register(s) (POST)
 localhost:8000/api/login # Login user (POST)
-localhost:8000/api/logout  # Logout user (POST)
+localhost:8000/api/logout # Logout user (POST)
 localhost:8000/api/user # get user (get)
 
 ## CRUD
@@ -22,23 +27,32 @@ localhost:8000/api/update/:id # update notes by id (PUT)
 localhost:8000/api/delete/:id # delete notes by id (DELETE)
 ```
 
-## Example Requests
+## Sample Request in postman
 ##### Register 
 ```json
 {
     "name": "emon",
     "email": "emon@gmail.com",
     "password": "8798634"
-
 }
 ```
 
 ##### Login 
 ```json
 {
-    "email": "admin@gmail.com",
-    "password": "123456"
+    "email": "emon@gmail.com",
+    "password": "8798634"
 }
+```
+
+##### Logout
+```json
+{
+    "title": "test",
+    "category": "test pertama",
+    "details": "data"
+}
+
 ```
 
 ##### Menambahkan Notes 
