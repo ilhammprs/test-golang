@@ -7,6 +7,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// create
 func CreateNote(c *fiber.Ctx) error {
 	var data map[string]string
 
@@ -44,6 +45,7 @@ func CreateNote(c *fiber.Ctx) error {
 	return c.JSON(note)
 }
 
+// get all
 func GetNotes(c *fiber.Ctx) error {
 	cookie := c.Cookies("jwt")
 
@@ -74,6 +76,7 @@ func GetNotes(c *fiber.Ctx) error {
 	return c.JSON(notes)
 }
 
+// get by id
 func GetNoteById(c *fiber.Ctx) error {
 	cookie := c.Cookies("jwt")
 
@@ -106,6 +109,7 @@ func GetNoteById(c *fiber.Ctx) error {
 	return c.JSON(note)
 }
 
+// update
 func UpdateNoteById(c *fiber.Ctx) error {
 	var data map[string]string
 
@@ -149,6 +153,7 @@ func UpdateNoteById(c *fiber.Ctx) error {
 	return c.JSON(note)
 }
 
+// delete
 func DeleteNote(c *fiber.Ctx) error {
 	cookie := c.Cookies("jwt")
 

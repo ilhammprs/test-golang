@@ -6,6 +6,7 @@ import (
 
 	"test-golang/database"
 	"test-golang/models"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gofiber/fiber/v2"
 	"golang.org/x/crypto/bcrypt"
@@ -13,6 +14,7 @@ import (
 
 const SecretKey = "secret"
 
+// register
 func Register(c *fiber.Ctx) error {
 	var data map[string]string
 
@@ -37,9 +39,13 @@ func Register(c *fiber.Ctx) error {
 		})
 	}
 
-	return c.JSON(user)
+	c.Status(fiber.StatusCreated)
+	return c.JSON(fiber.Map{
+		"message": "Register successfully!",
+	})
 }
 
+// login
 func Login(c *fiber.Ctx) error {
 	var data map[string]string
 
@@ -88,9 +94,13 @@ func Login(c *fiber.Ctx) error {
 
 	c.Cookie(&cookie)
 
-	return c.JSON(user)
+	c.Status(fiber.StatusCreated)
+	return c.JSON(fiber.Map{
+		"massage": "Login successfully!",
+	})
 }
 
+// user
 func User(c *fiber.Ctx) error {
 	cookie := c.Cookies("jwt")
 
@@ -114,6 +124,7 @@ func User(c *fiber.Ctx) error {
 	return c.JSON(user)
 }
 
+// logout
 func Logout(c *fiber.Ctx) error {
 	cookie := fiber.Cookie{
 		Name:     "jwt",
